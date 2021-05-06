@@ -1,0 +1,33 @@
+#+TITLE: dmenu
+* What is dmenu?
+
+dmenu is a dynamic menu for X, originally designed for dwm. It manages large numbers of user-defined menu items efficiently.  It is a very powerful tool that allows you to pipe information into it.  This makes dmenu a perfect utility to incorporate into your scripting.
+The patches that I used in this build include:
++ dmenu-border -- adds border around dmenu window
++ dmenu-center -- centers dmenu in the middle of screen (-c)
++ dmenu-fuzzyhighlight -- fuzzy matches gets highlighted
++ dmenu-fuzzymatch -- adds support for fuzzy-matching
++ dmenu-lineheight -- adds a flag (-h) to set the minimum height of dmenu lines
++ dmenu-numbers -- Displays number of matched and total items in top right corner
+* Available flags
++ [-l lines]
++ [-p prompt]
++ [-fn font]
++ [-m monitor]
++ [-h height]
++ [-nb color]
++ [-nf color]
++ [-sb color]
++ [-sf color]
++ [-nhb color]
++ [-nhf color]
++ [-shb color]
++ [-shf color]
++ [-w windowid]
++ [-c] for centering
+
+An example: dmenu_run -c -bw 2 -l 20 -p 'Run: '
+
+This launches dmenu_run with -c (centered), -bw (border width), -l (number of vertical lines).
+
+=NOTE:= Installing this fork will overwrite your existing dmenu installation so make a backup of your current config if you need it.
